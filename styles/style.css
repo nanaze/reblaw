@@ -5,23 +5,27 @@ html {
 body {
   height: 100%;
   padding:0;
-  margin:0;    
+  margin:0;  
+  font-family: Helvetica, sans-serif;
+  font-size: 13.2px;
+  background-color: black;
 }
 
 #center {
   margin-left: auto;
   margin-right: auto;
   width: 820px;
-  background-color: blue;
   min-height: 100%;
+  background-color: white;
 }
 
 #title {
+  text-transform:lowercase;
   background-color: red;
   font-weight: bold;
   color: white;
-  font-family: Helvetica, sans-serif;
-  line-height: 120%;
+  font-family: 'Averia Serif Libre', sans-serif;
+  /*line-height: 100;*/
   font-size: 18pt;
   padding: 0.4em;
 }
@@ -34,8 +38,37 @@ body {
 #menu {
   float: left;
   width: 180px;
-  background: purple;
+  padding: 0px;
 }
+
+#menu ul {
+  margin:0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#menu li {
+  padding: 0.1em;
+  color: black;
+}
+
+#menu a {
+  text-decoration: none;
+  color: black;
+  margin: 6px 10px;
+  display: block;
+}
+
+#menu li:hover {
+  color: white !important;
+  background-color: black;
+}
+
+#menu li:hover a {
+  color: white;
+}
+
+
 
 #content {
   margin-left: 200px;
