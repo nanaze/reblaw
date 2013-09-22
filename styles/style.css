@@ -48,27 +48,23 @@ body {
 }
 
 #menu li {
-  padding: 0.1em;
   color: black;
 }
 
 #menu a {
   text-decoration: none;
   color: black;
-  margin: 6px 10px;
+  padding: 6px 10px;
   display: block;
 }
 
-#menu li:hover {
-  color: white !important;
-  background-color: black;
+#menu li.selected {
+  /* background-color: black; */
 }
 
 #menu li:hover a {
-  color: white;
+  color: red;
 }
-
-
 
 #content {
   margin-left: 200px;
