@@ -63,7 +63,7 @@ def _PopulateContent():
       fragment = _ParseDocumentFragment(content)
 
       content_elem = _FindElementById(template_dom, 'content')
-
+      content_elem.appendChild(fragment)
 
       s = html5lib.serializer.htmlserializer.HTMLSerializer(omit_optional_tags=False)
       walker = html5lib.treewalkers.getTreeWalker("dom")(template_dom)
