@@ -70,7 +70,7 @@ def _PopulateContent():
 
       with open(os.path.join(out_dir, content_filename), 'w') as f:
         for item in s.serialize(walker):
-          f.write(item) 
+          f.write(item.encode('ascii', 'xmlcharrefreplace'))
 
                 
 def main():
