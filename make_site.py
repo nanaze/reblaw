@@ -3,6 +3,7 @@
 import os
 import html5lib
 import shutil
+import logging
 
 import xml.dom
 
@@ -50,7 +51,6 @@ def _YieldNodes(root):
       yield val
   
 def _PopulateContent():
-  
 
   for content_filename in os.listdir('content'):
     path = os.path.join('content', content_filename)
@@ -74,6 +74,10 @@ def _PopulateContent():
 
                 
 def main():
+  logging.basicConfig(level=logging.INFO)
+
+  logging.info('Starting site build...')
+  
   script_dir = os.path.dirname(os.path.realpath(__file__))
   os.chdir(script_dir)
   
@@ -84,8 +88,11 @@ def main():
 
   _CopyTree('styles')
   _CopyTree('js')
+  _CopyTree('images')  
 
   _PopulateContent()
+
+  logging.info('Build complete. Site written to %s' % out_dir)
 
 
 
