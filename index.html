@@ -2,41 +2,47 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="styles/style.css">
-<link href='http://fonts.googleapis.com/css?family=Averia+Serif+Libre' rel='stylesheet' type='text/css'>
-
+<link href='http://fonts.googleapis.com/css?family=Averia+Serif+Libre'
+rel='stylesheet' type='text/css'>
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="js/photos.js"></script>
 </head>
 <body>
 <div id=center>
-  <div id=title>
-    Rebellious <br>
-    Lawyering <br>
-    Conference <br>
-    <span class="year">2014</span>
+  <div id=sidebar>
+    <div id=title>
+      Rebellious <br>
+      Lawyering <br>
+      Conference <br>
+      <span class="year">2014</span>
+    </div>
+
+    <div class=register>
+      <a href="register.html" class=register>Register</a>
+    </div>
+    
+    <div id="menu">
+      <ul class="category-menu">
+
+	<li><a href="#">Schedule</a></li>
+	<li><a href="#">Program</a></li>
+	<li><a href="#">Travel</a></li>
+	<li><a href="#">Housing</a></li>
+	<li><a href="#">About</a></li>
+	<li><a href="#">Blog</a></li>
+      </ul>
+    </div>
   </div>
-  <div id="menu">
-    <ul class="category-menu">
-      <li>
-        <a href="#">Program</a>
-	<ul class="subcategory-menu">
-	  <li><a href="#">Workshops</a></li>
-	  <li><a href="#">Panels</a></li>
-	  <li><a href="#">Screenings</a></li>
-	</ul>
-      </li>
-      <li><a href="#">Register</a></li>
-      <li><a href="#">Travel</a></li>
-      <li><a href="#">Housing</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Blog</a></li>
-    </ul>
-  </div>
-  
+
   <div id=content>
+    <div id=photos></div>
+    <script>
+    reblawFillPhotos($('#photos').get(0));
+    </script>
     <img src="https://docs.google.com/spreadsheet/oimg?key=0AmDPbPtQj02YdHhpSk9pcXBCcjVDSUVYVTAtVDA5ZFE&oid=2&zx=o6fj9bpssxpc">
   </div>
 
-
-</div>
 
 </div>
 </body>

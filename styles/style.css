@@ -8,7 +8,7 @@ body {
   margin:0;  
   font-family: Helvetica, sans-serif;
   font-size: 13.2px;
-
+  background-color: #eee;
 }
 
 #center {
@@ -17,17 +17,27 @@ body {
   width: 820px;
   min-height: 100%;
   background-color: white;
+  box-shadow: 0 0 15px #888888;
+  position: relative;
+}
+
+#sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 180px;
+  padding: 24px;
+  padding-top: 0;
 }
 
 #title {
   text-transform:lowercase;
-  background-color: black;
+  background-color: white;
   font-weight: bold;
-  color: white;
+  color: black;
   font-family: 'Averia Serif Libre', sans-serif;
-
   font-size: 18pt;
-  padding: 0.4em;
+  margin-bottom: 1em;
 }
 
 #title .year {
@@ -38,12 +48,10 @@ body {
 #content {
   margin-left: 200px;
   position: relative;
+  padding: 1em;
 }
 
 #menu {
-  float: left;
-  width: 180px;
-  padding: 0px;
   color: black;
   font-size: 14px;
 }
@@ -51,26 +59,35 @@ body {
 #menu ul {
   margin: 0;
   padding: 0;
+  line-height: 180%;
 }
 
 #menu li {
   margin: 0;
-  padding: 0 1em;
   list-style-type: none;
 }
 
-#menu a {
+a {
   text-decoration: none;
-}
-
-ul.category-menu a {
   color: #000;
 }
 
-ul.subcategory-menu a {
-  color: #555;
+a:hover {
+  color: #0F4D92;
 }
 
+.register {
+  margin: 3em 0 3em 0;
+}
+
+.register a {
+  color: #FFF;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  background-color:  #0F4D92;
+  padding: 7px 8px;
+  border-radius: 3px;
+}
 
 
 
